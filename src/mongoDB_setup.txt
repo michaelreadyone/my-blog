@@ -1,0 +1,17 @@
+In mac using homebrew to install mongoDB
+1. install homebrew:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2. install mongoDB:
+brew install mongodb 
+3. create default database location
+sudo mkdir -p /data/db 
+4. permission setup:
+sudo chown -R `id -un` /data/db
+
+In terminal type mongo to start mongoDB:
+1. create/switch to a database:
+> use my-blog
+2. insert data:
+> db.articles.insert([...])
+3. see all data:
+> db.articles.find({}).pretty()
